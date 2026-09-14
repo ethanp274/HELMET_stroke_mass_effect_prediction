@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "HELMET_stroke_mass_effect_prediction"
+type: software
+version: 1.0.0
+license: Apache-2.0
+repository-code: "https://github.com/ethanp274/HELMET_stroke_mass_effect_prediction"
+authors:
+  - family-names: Phillips
+    given-names: Ethan
+    affiliation: "University of Oxford"
+preferred-citation:
+  type: article
+  title: "Hybrid machine learning for real-time prediction of edema trajectory in large middle cerebral artery stroke"
+  authors:
+    - family-names: "Phillips"
+      given-names: "Ethan"
+    - family-names: "O'Donoghue"
+      given-names: "Odhran"
+    - family-names: "Zhang"
+      given-names: "Yumeng"
+    - family-names: "Tsimpos"
+      given-names: "Panos"
+    - family-names: "Mallinger"
+      given-names: "Leigh Ann"
+    - family-names: "Chatzidakis"
+      given-names: "Stefanos"
+    - family-names: "Pohlmann"
+      given-names: "Jack"
+    - family-names: "Du"
+      given-names: "Yili"
+    - family-names: "Kim"
+      given-names: "Ivy"
+    - family-names: "Song"
+      given-names: "Jonathan"
+    - family-names: "Brush"
+      given-names: "Benjamin"
+    - family-names: "Smirnakis"
+      given-names: "Stelios"
+    - family-names: "Ong"
+      given-names: "Charlene J."
+    - family-names: "Orfanoudaki"
+      given-names: "Agni"
+  journal: "npj Digital Medicine"
+  volume: 8
+  start: "288"
+  year: 2025
+  doi: "10.1038/s41746-025-01687-y"
+  url: "https://doi.org/10.1038/s41746-025-01687-y"

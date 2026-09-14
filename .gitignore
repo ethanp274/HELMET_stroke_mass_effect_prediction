@@ -1,0 +1,55 @@
+# --- Patient data: never commit ---
+# The only data in this repo is data/demo (synthetic) and data/censored is
+# likewise off-limits. Everything else under data/ is real and stays local.
+data/*
+!data/demo/
+!data/demo/**
+*.csv
+*.xlsx
+*.dta
+*.parquet
+
+# --- Experiment tracking & caches ---
+wandb/
+cache/
+lightning_logs/
+.joblib/
+
+# --- Generated figures and outputs ---
+results/figures/
+results/raw_model_output/
+*.png
+*.pdf
+*.svg
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --- Environments ---
+.venv/
+.*venv/
+venv/
+env/
+.env
+
+# --- Tooling ---
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+
+# --- Editors / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

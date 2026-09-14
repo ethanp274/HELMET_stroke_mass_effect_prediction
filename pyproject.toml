@@ -1,0 +1,60 @@
+[project]
+name = "helmet-mass-effect-pred"
+version = "1.0.0"
+description = "HELMET: hybrid machine learning for real-time prediction of edema trajectory after large MCA stroke (npj Digit. Med. 2025)."
+readme = "README.md"
+requires-python = "==3.11.*"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "Ethan Phillips", email = "ethan.phillips@phc.ox.ac.uk" }]
+keywords = ["stroke", "cerebral-edema", "midline-shift", "ehr", "xgboost", "clinical-prediction"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Programming Language :: Python :: 3.11",
+]
+
+# Pinned to the environment that produced the published results
+# (recovered from Weights & Biases run metadata, Python 3.11.8).
+dependencies = [
+    "datasets==2.19.2",
+    "dateparser==1.2.0",
+    "evaluate==0.4.2",
+    "fire==0.6.0",
+    "joblib==1.2.0",
+    "matplotlib==3.8.2",
+    "numpy==1.26.3",
+    "pandas==2.1.4",
+    "pydantic==2.6.4",
+    "pyyaml==6.0.1",
+    "scikit-learn==1.2.2",
+    "scikit-optimize==0.10.1",
+    "scipy==1.11.4",
+    # wandb 0.16 imports pkg_resources, which setuptools dropped in v81.
+    "setuptools>=75,<81",
+    "seaborn==0.13.2",
+    "shap==0.45.0",
+    "torch==2.1.0",
+    "torchmetrics==1.1.2",
+    "tqdm==4.66.2",
+    "transformers==4.41.2",
+    "wandb==0.16.2",
+    "xgboost==2.1.1",
+]
+
+[project.optional-dependencies]
+# Only needed for the CUDA path in scripts/external_validation/xgb_llm_reduced.py.
+gpu = ["cupy-cuda12x>=13.0,<14"]
+
+[project.urls]
+Repository = "https://github.com/ethanp274/HELMET_stroke_mass_effect_prediction"
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/helmet_mass_effect_pred"]
+
+[tool.uv]
+package = true

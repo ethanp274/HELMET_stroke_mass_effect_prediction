@@ -1,0 +1,37 @@
+program: FINAL_PIPELINE_AND_TRAINING/XGB_training.py
+method: bayes
+entity: edema_pred_ml
+project: final_code_run
+metric:
+  name: xgb mgb filtered mean AUROC
+  goal: maximize 
+parameters:
+  lookback_hours:
+    values: [24]
+  lookahead_hours:
+    values: [24]
+  no_transition_weighting:
+    min: 0.5
+    max: 0.7
+  learning_rate:
+    min: 0.001
+    max: 0.04
+  max_depth:
+    min: 4
+    max: 7
+  min_child_weight:
+    min: 1
+    max: 10
+  gamma:
+    min: 0.0
+    max: 5.0
+  subsample:
+    min: 0.7
+    max: 0.9
+  reg_lambda:
+    min: 1.0
+    max: 10.0
+  reg_alpha:
+    min: 0.0
+    max: 5.0
+  

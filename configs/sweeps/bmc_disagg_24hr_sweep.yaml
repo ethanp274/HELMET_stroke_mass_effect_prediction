@@ -1,0 +1,37 @@
+program: BMC_data_exps/model_BMC_xgb_LLM_reduced_disagg.py
+method: bayes
+entity: edema_pred_ml
+project: disagg_24hr_sweep_fixed_2
+metric:
+  name: filtered CV mean AUROC
+  goal: maximize 
+parameters:
+  lookback_hours:
+    values: [24]
+  lookahead_hours:
+    values: [24]
+  no_transition_weighting:
+    min: 0.45
+    max: 0.55
+  learning_rate:
+    min: 0.003
+    max: 0.02
+  max_depth:
+    min: 5
+    max: 7
+  min_child_weight:
+    min: 1
+    max: 6
+  gamma:
+    min: 0.0
+    max: 3.0
+  subsample:
+    min: 0.7
+    max: 0.9
+  reg_lambda:
+    min: 3.0
+    max: 8.0
+  reg_alpha:
+    min: 0.0
+    max: 4.0
+  
